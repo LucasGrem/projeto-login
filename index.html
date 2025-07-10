@@ -5,18 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    
 </head>
 <body>
     <main>
         <section id="login">
             <div id="imagem">
-                foto
+                
             </div>
             <div id="formulario">
                 <h1>Login</h1>
                 <p>Seja bem-vindo(a) novamente. Faça o login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
-                <form action="login.php" method="post">
-
+                
+                <form action="login.js" method="post" autocomplete="on">
+                    <div class="campo">
+                        <span class="material-symbols-outlined">person</span>
+                        <input type="email" name="email" id="iemail" required autocomplete="email" maxlength="30" placeholder="Seu e-mail">
+                        <label for="iemail">email</label>
+                    </div>
+                    <div class="campo">   
+                        <span class="material-symbols-outlined">vpn_key</span>
+                        <input type="password" name="senha" id="isenha" required autocomplete="off" minlength="8" maxlength="20" placeholder="Sua senha">
+                        <label for="isenha">senha</label>
+                    </div>
+    
+                    <input type="submit" id="botao-enviar" value="Enviar">
+                    <a href="esqueci.html" id="botao-esqueci-senha">Esqueci a senha <span class="material-symbols-outlined">mail</span></a>
                 </form>
             </div>
         </section>
